@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import DashboardCard from "../Components/DashboardCard";
 import ProgressBar from "../Components/ProgressBar";
 import { EnrollmentContext } from "../context/EnrollmentContext";
-import courses from "../data/courses";
+import courses from "../data/courses.js";
 
 const Dashboard = () => {
   const { enrolledCourses } = useContext(EnrollmentContext);
