@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import courses from "../data/courses";
+import courses from "../data/courses.js";
 import { useContext } from "react";
 import { EnrollmentContext } from "../context/EnrollmentContext";
 
