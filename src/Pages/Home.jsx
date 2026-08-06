@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Hero from "../Components/Hero";
 import CourseCard from "../Components/CourseCard";
-import courses from "../data/courses.js";
+import courses from "../data/courses";
 import {FaBook, FaLaptop, FaTrophy} from 'react-icons/fa'
 import { Link } from "react-router-dom";
 
