@@ -13,6 +13,11 @@ const CategoryFilter = ({ setCategory }) => {
         Backend
       </button>
 
+      {/* Add it here */}
+      <button onClick={() => setCategory("Programming")}>
+        Programming
+      </button>
+
       <button onClick={() => setCategory("UI/UX")}>
         UI/UX
       </button>

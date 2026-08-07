@@ -53,7 +53,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+    
       <section className="page">
         <h2>Why Choose JuliusTech?</h2>
 
