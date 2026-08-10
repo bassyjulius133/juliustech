@@ -1,16 +1,20 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   useEffect(() => {
-    document.title = "404 - Page Not Found";
+    document.title = "JuliusTech | Page Not Found";
   }, []);
 
   return (
-    <div className="page">
-      <h1>404</h1>
-      <h2>Page Not Found</h2>
-      <p>The page you are looking for does not exist.</p>
-    </div>
+    <section className="page empty-state large-empty-state">
+      <p className="section-label">404</p>
+      <h1>Page not found</h1>
+      <p>The page you are looking for does not exist or may have been moved.</p>
+      <Link to="/" className="primary-button">
+        Go to home
+      </Link>
+    </section>
   );
 };
 

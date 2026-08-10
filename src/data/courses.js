@@ -5,10 +5,10 @@ const courses = [
     instructor: "John Doe",
     category: "Frontend",
     price: 25000,
-    image: "https://picsum.photos/300/200?random=1",
+    image: "https://picsum.photos/seed/react-course/600/400",
     duration: "8 Weeks",
     rating: 4.8,
-    description: "Learn React from the ground up with practical projects."
+    description: "Learn React from the ground up and build small practical projects."
   },
   {
     id: 2,
@@ -16,32 +16,32 @@ const courses = [
     instructor: "Jane Smith",
     category: "Frontend",
     price: 20000,
-    image: "https://picsum.photos/300/200?random=2",
+    image: "https://picsum.photos/seed/javascript-course/600/400",
     duration: "6 Weeks",
     rating: 4.7,
-    description: "Master modern JavaScript including ES6+."
+    description: "Improve your JavaScript skills with modern syntax and useful browser features."
   },
   {
     id: 3,
-    title: "Node.js & Express",
+    title: "Node.js and Express",
     instructor: "Michael James",
     category: "Backend",
     price: 28000,
-    image: "https://picsum.photos/300/200?random=3",
+    image: "https://picsum.photos/seed/node-course/600/400",
     duration: "10 Weeks",
     rating: 4.9,
-    description: "Build powerful backend applications using Node.js."
+    description: "Build backend applications and simple APIs with Node.js and Express."
   },
   {
     id: 4,
-    title: "UI/UX Design",
+    title: "UI/UX Design Basics",
     instructor: "Sarah Johnson",
     category: "UI/UX",
     price: 18000,
-    image: "https://picsum.photos/300/200?random=4",
+    image: "https://picsum.photos/seed/design-course/600/400",
     duration: "5 Weeks",
     rating: 4.6,
-    description: "Design beautiful and user-friendly interfaces."
+    description: "Learn the basics of creating clear, useful, and friendly digital interfaces."
   },
   {
     id: 5,
@@ -49,10 +49,10 @@ const courses = [
     instructor: "David Wilson",
     category: "Programming",
     price: 22000,
-    image: "https://picsum.photos/300/200?random=5",
+    image: "https://picsum.photos/seed/python-course/600/400",
     duration: "8 Weeks",
     rating: 4.9,
-    description: "Learn Python from beginner to advanced."
+    description: "Start programming with Python through examples, exercises, and mini projects."
   },
   {
     id: 6,
@@ -60,10 +60,10 @@ const courses = [
     instructor: "Emily Brown",
     category: "Programming",
     price: 24000,
-    image: "https://picsum.photos/300/200?random=6",
+    image: "https://picsum.photos/seed/java-course/600/400",
     duration: "9 Weeks",
     rating: 4.8,
-    description: "Complete Java programming course with projects."
+    description: "Understand Java programming, object-oriented programming, and basic applications."
   },
   {
     id: 7,
@@ -71,10 +71,10 @@ const courses = [
     instructor: "Daniel White",
     category: "Programming",
     price: 21000,
-    image: "https://picsum.photos/300/200?random=7",
+    image: "https://picsum.photos/seed/csharp-course/600/400",
     duration: "7 Weeks",
     rating: 4.7,
-    description: "Master C# and object-oriented programming."
+    description: "Learn C# fundamentals and create simple object-oriented programs."
   },
   {
     id: 8,
@@ -82,10 +82,10 @@ const courses = [
     instructor: "Sophia Green",
     category: "Mobile",
     price: 30000,
-    image: "https://picsum.photos/300/200?random=8",
+    image: "https://picsum.photos/seed/flutter-course/600/400",
     duration: "12 Weeks",
     rating: 4.9,
-    description: "Build Android and iOS apps using Flutter."
+    description: "Build simple Android and iOS mobile applications with Flutter."
   }
 ];
 

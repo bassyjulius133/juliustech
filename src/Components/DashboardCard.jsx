@@ -1,12 +1,9 @@
-import React from "react";
-
 const DashboardCard = ({ title, value }) => {
   return (
-    <div className="dashboard-card">
-      <h2>{value}</h2>
-
+    <article className="dashboard-card">
       <p>{title}</p>
-    </div>
+      <h2>{value}</h2>
+    </article>
   );
 };
 

@@ -1,15 +1,26 @@
-import React from "react";
-
 const ProgressBar = ({ progress }) => {
-  return (
-    <div className="progress-container">
-      <div
-        className="progress"
-        style={{ width: `${progress}%` }}
-      ></div>
+  const safeProgress = Math.min(Math.max(progress, 0), 100);
 
-      <p>{progress}% Completed</p>
-    </div>
+  return (
+    <section className="progress-card">
+      <div className="progress-heading">
+        <div>
+          <h2>Enrollment progress</h2>
+          <p>Your enrolled courses compared with the available courses.</p>
+        </div>
+        <strong>{safeProgress}%</strong>
+      </div>
+      <div
+        className="progress-track"
+        role="progressbar"
+        aria-label="Enrollment progress"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow={safeProgress}
+      >
+        <div className="progress-fill" style={{ width: `${safeProgress}%` }}></div>
+      </div>
+    </section>
   );
 };
 

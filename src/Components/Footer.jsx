@@ -1,9 +1,10 @@
-import React from "react";
-
 const Footer = () => {
   return (
-    <footer>
-      <p>© 2026 JuliusTech Online Course Learning Dashboard</p>
+    <footer className="site-footer">
+      <div className="footer-content">
+        <p>JuliusTech Learning Platform</p>
+        <p>Simple learning for future tech professionals.</p>
+      </div>
     </footer>
   );
 };

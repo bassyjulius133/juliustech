@@ -1,30 +1,21 @@
-import React from "react";
+import Category from "./Category.jsx";
 
-const CategoryFilter = ({ setCategory }) => {
+const categories = ["All", "Frontend", "Backend", "Programming", "UI/UX", "Mobile"];
+
+const CategoryFilter = ({ category, setCategory }) => {
   return (
-    <div className="categories">
-      <button onClick={() => setCategory("All")}>All</button>
-
-      <button onClick={() => setCategory("Frontend")}>
-        Frontend
-      </button>
-
-      <button onClick={() => setCategory("Backend")}>
-        Backend
-      </button>
-
-      {/* Add it here */}
-      <button onClick={() => setCategory("Programming")}>
-        Programming
-      </button>
-
-      <button onClick={() => setCategory("UI/UX")}>
-        UI/UX
-      </button>
-
-      <button onClick={() => setCategory("Mobile")}>
-        Mobile
-      </button>
+    <div className="category-filter" aria-label="Course categories">
+      <span className="filter-label">Category</span>
+      <div className="category-buttons">
+        {categories.map((item) => (
+          <Category
+            key={item}
+            label={item}
+            active={category === item}
+            onClick={() => setCategory(item)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

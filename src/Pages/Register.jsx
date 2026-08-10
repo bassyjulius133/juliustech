@@ -1,71 +1,62 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import EnrollmentForm from "../components/EnrollmentForm.jsx";
+import courses from "../data/courses.js";
 
 const Register = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [course, setCourse] = useState("");
+  const [registeredName, setRegisteredName] = useState("");
 
   useEffect(() => {
     document.title = "JuliusTech | Register";
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!name || !email || !course) {
-      alert("Please fill in all fields.");
-      return;
-    }
-
-    alert(`Registration Successful!
-
-Name: ${name}
-Email: ${email}
-Course: ${course}`);
-
-    setName("");
-    setEmail("");
-    setCourse("");
+  const handleRegistration = (formData) => {
+    localStorage.setItem("studentProfile", JSON.stringify(formData));
+    setRegisteredName(formData.fullName);
   };
 
   return (
-    <div className="page">
-      <h1>Student Registration</h1>
+    <section className="page register-page">
+      <div className="registration-layout">
+        <div className="registration-intro-card">
+          <p className="hero-label">STUDENT REGISTRATION</p>
+          <h1>Set up your learning profile.</h1>
+          <p>
+            Add your details once, choose a course you are interested in, and keep your learning journey organised.
+          </p>
 
-      <form className="register-form" onSubmit={handleSubmit}>
+          <div className="registration-steps">
+            <div>
+              <span>1</span>
+              <p>Save your basic student details.</p>
+            </div>
+            <div>
+              <span>2</span>
+              <p>Select a course you want to explore.</p>
+            </div>
+            <div>
+              <span>3</span>
+              <p>Build your learning list when you are ready.</p>
+            </div>
+          </div>
+        </div>
 
-        <input
-          type="text"
-          placeholder="Enter Full Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <div className="registration-form-panel">
+          <div className="registration-form-heading">
+            <p className="section-label">YOUR DETAILS</p>
+            <h2>Create or update your profile</h2>
+            <p>All fields are required.</p>
+          </div>
 
-        <input
-          type="email"
-          placeholder="Enter Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <EnrollmentForm courses={courses} onSubmit={handleRegistration} />
 
-        <select
-          value={course}
-          onChange={(e) => setCourse(e.target.value)}
-        >
-          <option value="">Select Course</option>
-          <option>React</option>
-          <option>JavaScript</option>
-          <option>Python</option>
-          <option>Java</option>
-          <option>C#</option>
-        </select>
-
-        <button type="submit">
-          Register
-        </button>
-
-      </form>
-    </div>
+          {registeredName && (
+            <p className="form-message">
+              Thanks, {registeredName}. Your registration has been saved.
+            </p>
+          )}
+        </div>
+      </div>
+    </section>
   );
 };
 

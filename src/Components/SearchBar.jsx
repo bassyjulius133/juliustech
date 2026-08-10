@@ -1,13 +1,15 @@
-import React from "react";
-
 const SearchBar = ({ search, setSearch }) => {
   return (
-    <input
-      type="text"
-      placeholder="Search courses..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-    />
+    <label className="search-field" htmlFor="course-search">
+      <span>Search courses</span>
+      <input
+        id="course-search"
+        type="search"
+        placeholder="Search by course, instructor, or category"
+        value={search}
+        onChange={(event) => setSearch(event.target.value)}
+      />
+    </label>
   );
 };
 

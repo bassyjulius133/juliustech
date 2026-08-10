@@ -1,38 +1,35 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Navbar from "./Components/Navbar";
-
-import Home from "./Pages/Home";
-import Courses from "./Pages/Courses";
-import Dashboard from "./Pages/Dashboard";
-import Profile from "./Pages/Profile";
-import Enrolled from "./Pages/Enrolled";
-import CourseDetails from "./Pages/CourseDetails";
-import NotFound from "./Pages/NotFound";
-import Footer from "./Components/Footer";
-import Register from "./Pages/Register";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar.jsx";
+import CourseDetails from "./pages/CourseDetails.jsx";
+import Courses from "./pages/Courses.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import Enrolled from "./pages/Enrolled.jsx";
+import Home from "./pages/Home.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import Profile from "./pages/Profile.jsx";
+import Register from "./pages/Register.jsx";
 
 const App = () => {
   return (
-    <Router>
-    <Navbar />
-
-    <main className="main-content">
-        <Routes>
+    <BrowserRouter>
+      <div className="app">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/enrolled" element={<Enrolled />} />
             <Route path="/course/:id" element={<CourseDetails />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/enrolled" element={<Enrolled />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
-        </Routes>
-    </main>
-
-    <Footer />
-</Router>
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 };
 

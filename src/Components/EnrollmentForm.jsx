@@ -1,98 +1,72 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const EnrollmentForm = () => {
-
-  const [student, setStudent] = useState({
+const EnrollmentForm = ({ courses, onSubmit }) => {
+  const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    phone: "",
-    gender: "",
-    courseLevel: ""
+    course: ""
   });
 
-  const handleChange = (e) => {
-    setStudent({
-      ...student,
-      [e.target.name]: e.target.value
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    localStorage.setItem(
-      "student",
-      JSON.stringify(student)
-    );
-
-    alert("Registration Successful!");
-
-    setStudent({
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSubmit(formData);
+    setFormData({
       fullName: "",
       email: "",
-      phone: "",
-      gender: "",
-      courseLevel: ""
+      course: ""
     });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="register-form">
+    <form className="register-form" onSubmit={handleSubmit}>
+      <label className="form-field" htmlFor="fullName">
+        <span>Full name</span>
+        <input
+          id="fullName"
+          type="text"
+          name="fullName"
+          placeholder="Enter your full name"
+          value={formData.fullName}
+          onChange={handleChange}
+          required
+        />
+      </label>
 
-      <input
-        type="text"
-        name="fullName"
-        placeholder="Full Name"
-        value={student.fullName}
-        onChange={handleChange}
-        required
-      />
+      <label className="form-field" htmlFor="email">
+        <span>Email address</span>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Enter your email address"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </label>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        value={student.email}
-        onChange={handleChange}
-        required
-      />
+      <label className="form-field" htmlFor="course">
+        <span>Course of interest</span>
+        <select id="course" name="course" value={formData.course} onChange={handleChange} required>
+          <option value="">Choose a course</option>
+          {courses.map((course) => (
+            <option key={course.id} value={course.title}>
+              {course.title}
+            </option>
+          ))}
+        </select>
+      </label>
 
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        value={student.phone}
-        onChange={handleChange}
-        required
-      />
-
-      <select
-        name="gender"
-        value={student.gender}
-        onChange={handleChange}
-        required
-      >
-        <option value="">Select Gender</option>
-        <option>Male</option>
-        <option>Female</option>
-      </select>
-
-      <select
-        name="courseLevel"
-        value={student.courseLevel}
-        onChange={handleChange}
-        required
-      >
-        <option value="">Choose Level</option>
-        <option>Beginner</option>
-        <option>Intermediate</option>
-        <option>Advanced</option>
-      </select>
-
-      <button type="submit">
-        Register
+      <button type="submit" className="primary-button form-button">
+        Save registration
       </button>
-
     </form>
   );
 };
