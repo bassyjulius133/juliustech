@@ -5,7 +5,7 @@ const courses = [
     instructor: "John Doe",
     category: "Frontend",
     price: 25000,
-    image: "https://picsum.photos/seed/react-course/600/400",
+    image: "https://i.pinimg.com/736x/b8/23/2d/b8232da97421d87f3e28ba5d76976fc0.jpg",
     duration: "8 Weeks",
     rating: 4.8,
     description: "Learn React from the ground up and build small practical projects."
