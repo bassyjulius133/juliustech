@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer.jsx";
-import Navbar from "./components/Navbar.jsx";
-import CourseDetails from "./pages/CourseDetails.jsx";
-import Courses from "./pages/Courses.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
+import Footer from "./Components/Footer.jsx";
+import Navbar from "./Components/Navbar.jsx";
+import CourseDetails from "./Pages/CourseDetails.jsx";
+import Courses from "./Pages/Courses.jsx";
+import Dashboard from "./Pages/Dashboard.jsx";
 import Enrolled from "./pages/Enrolled.jsx";
-import Home from "./pages/Home.jsx";
-import NotFound from "./pages/NotFound.jsx";
-import Profile from "./pages/Profile.jsx";
-import Register from "./pages/Register.jsx";
+import Home from "./Pages/Home.jsx";
+import NotFound from "./Pages/NotFound.jsx";
+import Profile from "./Pages/Profile.jsx";
+import Register from "./Pages/Register.jsx";
 
 const App = () => {
   return (
