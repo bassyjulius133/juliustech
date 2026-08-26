@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import CategoryFilter from "../components/CategoryFilter.jsx";
-import CourseCard from "../components/CourseCard.jsx";
-import SearchBar from "../components/SearchBar.jsx";
+import CategoryFilter from "../Components/CategoryFilter.jsx";
+import CourseCard from "../Components/CourseCard.jsx";
+import SearchBar from "../Components/SearchBar.jsx";
 import courses from "../data/courses.js";
 
 const Courses = () => {

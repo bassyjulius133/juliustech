@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import DashboardCard from "../components/DashboardCard.jsx";
-import ProgressBar from "../components/ProgressBar.jsx";
+import DashboardCard from "../Components/DashboardCard.jsx";
+import ProgressBar from "../Components/ProgressBar.jsx";
 import { EnrollmentContext } from "../context/EnrollmentContext.jsx";
 import courses from "../data/courses.js";
 

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import CourseCard from "../components/CourseCard.jsx";
-import Hero from "../components/Hero.jsx";
+import CourseCard from "../Components/CourseCard.jsx";
+import Hero from "../Components/Hero.jsx";
 import courses from "../data/courses.js";
 
 const Home = () => {
