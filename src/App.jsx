@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar.jsx";
 import CourseDetails from "./Pages/CourseDetails.jsx";
 import Courses from "./Pages/Courses.jsx";
 import Dashboard from "./Pages/Dashboard.jsx";
-import Enrolled from "./pages/Enrolled.jsx";
+import Enrolled from "./Pages/Enrolled.jsx";
 import Home from "./Pages/Home.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 import Profile from "./Pages/Profile.jsx";
