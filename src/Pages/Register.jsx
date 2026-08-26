@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import EnrollmentForm from "../components/EnrollmentForm.jsx";
+import EnrollmentForm from "../Components/EnrollmentForm.jsx";
 import courses from "../data/courses.js";
 
 const Register = () => {
